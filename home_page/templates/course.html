@@ -1,0 +1,11 @@
+<div>
+    {% for course in course %}
+        <div class = "coursename">
+            <a href=" {% url 'course_detail' course.id %}">
+            <h3>COURSE NAME : {{course.course_name | capfirst }}</h3>
+            </a>
+            <p>DURATION : {{course.duration_hours}}</p>
+            <p>PRICE : {{course.course_price}}</p>
+        </div>
+    {% endfor %}
+</div>
